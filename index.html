@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💻 Su Práctica Digital Segura - Huechuraba</title>
+    <style>
+        /* PRINCIPIO: Estética y Diseño Minimalista + Visibilidad */
+        body {
+            font-family: 'Verdana', 'Arial', sans-serif;
+            font-size: 1.5em; /* Tamaño base muy grande */
+            line-height: 1.6;
+            margin: 40px;
+            background-color: #e6e6fa; /* Lavanda muy claro y suave */
+            color: #1a1a1a; /* Texto casi negro (Alto Contraste) */
+        }
+        h1 {
+            color: #4b0082; /* Púrpura oscuro, fácil de ver */
+            font-size: 2.5em;
+            text-align: center;
+            border-bottom: 4px solid #4b0082;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #d2691e; /* Color cálido para encabezados de sección */
+            font-size: 1.8em;
+            margin-top: 40px;
+        }
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white; /* Contenido principal en blanco para contraste */
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra clara para enfocar */
+        }
+        .seccion-practica {
+            padding: 25px;
+            margin-top: 25px;
+            border: 3px solid #ccc;
+            border-radius: 8px;
+            background-color: #f7f7ff; /* Fondo sutil para las áreas de práctica */
+        }
+        /* PRINCIPIO: Prevención de Errores */
+        .consejo-seguridad {
+            background-color: #ffcccb; /* Fondo rojo/rosa para advertencias de seguridad */
+            color: #900000;
+            padding: 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #3cb371; /* Verde esmeralda, color de "éxito" */
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            font-size: 1.3em;
+            cursor: pointer;
+            border-radius: 5px;
+            display: block;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2e8b57;
+        }
+        .explicacion-clave {
+            border-left: 5px solid #4b0082;
+            padding-left: 15px;
+            margin-top: 10px;
+            background-color: #f0e6ff;
+        }
+        .tecla-importante {
+            color: #4b0082;
+            font-weight: bold;
+            background-color: #fffacd; /* Amarillo suave para destacar la tecla */
+            padding: 3px 8px;
+            border-radius: 3px;
+            border: 1px solid #4b0082;
+            white-space: nowrap; /* Evita que el nombre de la tecla se rompa */
+        }
+        #texto-ingresado {
+            border: 2px solid #4b0082;
+            padding: 15px;
+            min-height: 120px;
+            margin-top: 15px;
+            background-color: white;
+            font-size: 1.5em;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🚀 ¡Bienvenido/a al Refuerzo Digital!</h1>
+
+        <p class="consejo-seguridad">
+            ⚠️ **ATENCIÓN:** Esta página es 100% segura. **¡Es IMPOSIBLE que dañe algo del computador o la información!** Practique con tranquilidad.
+        </p>
+
+        <h2>🖱️ 1. EXPLICACIÓN y PRÁCTICA del Ratón</h2>
+        
+        <div class="seccion-practica">
+            <h3>¿Qué hace el Ratón?</h3>
+            <p>El ratón es como su **dedo en el celular**, pero para el computador. Le sirve para **señalar** dónde quiere ir.</p>
+            <div class="explicacion-clave">
+                <p>👉 **Función principal:** Mover la flecha (cursor) en la pantalla.</p>
+                <p>👉 **Clic (Botón Izquierdo):** Es el "Toque" o "Tocar" del celular. Sirve para **seleccionar** o **abrir** una opción.</p>
+            </div>
+            
+            <h3>Ejercicio de Precisión (Control del Usuario)</h3>
+            <p>El movimiento se aprende con práctica. Intente mover el ratón despacio hasta el botón y haga **un solo clic** firme.</p>
+            
+            <button id="boton-raton" onclick="mostrarMensajeRaton()">HAGA CLIC AQUÍ para confirmar su control.</button>
+            
+            <p id="mensaje-raton" style="text-align: center; font-weight: bold; margin-top: 15px; color: #3cb371; display: none;">
+                ¡Felicidades, **CLIC PERFECTO**! Siga con el teclado.
+            </p>
+        </div>
+
+        <hr style="border: 1px solid #ccc; margin: 40px 0;">
+
+        <h2>⌨️ 2. EXPLICACIÓN y PRÁCTICA del Teclado</h2>
+        
+        <div class="seccion-practica">
+            <h3>¿Qué hace el Teclado?</h3>
+            <p>El teclado es su máquina de escribir digital. Conocer la ubicación de solo **tres teclas** le dará gran seguridad para empezar a escribir:</p>
+            
+            <div class="explicacion-clave">
+                
+                <h4>1. La Tecla para Corregir: <span class="tecla-importante">BORRAR</span> o <span class="tecla-importante">BACKSPACE</span></h4>
+                <ul>
+                    <li>**Ubicación:** Está justo **encima de la tecla ENTER**, en el lado derecho. Es una tecla **larga** con una **flecha gorda hacia la izquierda** (←).</li>
+                    <li>**Uso (Prevención de Errores):** ¡No tenga miedo! Presiónela para **eliminar** la última letra que escribió y **arreglar** cualquier error.</li>
+                </ul>
+
+                <h4>2. La Tecla para Continuar: <span class="tecla-importante">ENTER</span> o <span class="tecla-importante">INTRO</span></h4>
+                <ul>
+                    <li>**Ubicación:** Generalmente es la tecla más grande y gruesa en el **lado derecho**, justo debajo de <span class="tecla-importante">Borrar</span>.</li>
+                    <li>**Uso:** Sirve para dar un **salto de línea** (empezar un nuevo párrafo) o para **ACEPTAR** una opción en un programa.</li>
+                </ul>
+
+                <h4>3. El Espacio: <span class="tecla-importante">BARRA ESPACIADORA</span></h4>
+                <ul>
+                    <li>**Ubicación:** Es la tecla **más larga de todo el teclado**, ubicada en la parte inferior.</li>
+                    <li>**Uso:** Sirve para dejar un **espacio** entre las palabras.</li>
+                </ul>
+            </div>
+
+            <h3>Cuidado con las Mayúsculas (El "Grito")</h3>
+            <p>Si escribe **TODO ASÍ**, es porque la tecla <span class="tecla-importante">Bloq Mayús</span> (o Caps Lock) está **activada**.</p>
+            <p>📍 **SOLUCIÓN:** Presione esa tecla **solo una vez**. Fíjese en la **luz** de su teclado. Si la luz está **APAGADA**, escribirá normal.</p>
+
+            <h3>Ejercicio de Teclado y Bloq Mayús</h3>
+            <p>✅ **Pruebe aquí:** Escriba su nombre. Use la tecla **Borrar** si se equivoca. Luego, active y desactive el **Bloq Mayús** para ver la diferencia.</p>
+            
+            <textarea id="texto-ingresado" placeholder="Escriba aquí para practicar.
+¡Use la tecla BORRAR si se equivoca!
+Pruebe la tecla Bloq Mayús para escribir con mayúsculas." rows="6"></textarea>
+        </div>
+
+        <hr style="border: 1px solid #ccc; margin: 40px 0;">
+
+        <h2>👓 3. Ayuda para la Vista (Zoom)</h2>
+        <div class="seccion-practica">
+            <p>Este es un truco de **Libertad y Control** sobre lo que ve en cualquier página web:</p>
+            
+            <p>Si la letra es muy pequeña, usted puede hacerla **más grande** de inmediato:</p>
+            
+            <ol>
+                <li>Mantenga presionada la tecla **CTRL** (Control, que está a la izquierda).</li>
+                <li>Sin soltar **CTRL**, presione la tecla **Más/Suma** (<span class="tecla-importante">+</span>) varias veces.</li>
+            </ol>
+            
+            <p>Para volver al tamaño normal, presione **CTRL** y la tecla del número **CERO** (<span class="tecla-importante">0</span>).</p>
+            <p style="text-align: center; font-weight: bold; color: #4b0082; margin-top: 15px;">¡Inténtelo ahora mismo en esta página y experimente la diferencia!</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Función simple de JavaScript para el botón de práctica del ratón
+        function mostrarMensajeRaton() {
+            // Muestra el mensaje de éxito
+            document.getElementById('mensaje-raton').style.display = 'block';
+            // Oculta el botón para centrar la atención en el éxito del clic
+            document.getElementById('boton-raton').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
