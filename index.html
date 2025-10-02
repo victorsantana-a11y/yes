@@ -3,195 +3,356 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💻 Su Práctica Digital Segura - Huechuraba</title>
+    <title>💻 Aprenda Digital - Centro de Aprendizaje</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <style>
-        /* PRINCIPIO: Estética y Diseño Minimalista + Visibilidad */
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
+        
         body {
-            font-family: 'Verdana', 'Arial', sans-serif;
-            font-size: 1.5em; /* Tamaño base muy grande */
-            line-height: 1.6;
-            margin: 40px;
-            background-color: #e6e6fa; /* Lavanda muy claro y suave */
-            color: #1a1a1a; /* Texto casi negro (Alto Contraste) */
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
         }
-        h1 {
-            color: #4b0082; /* Púrpura oscuro, fácil de ver */
-            font-size: 2.5em;
-            text-align: center;
-            border-bottom: 4px solid #4b0082;
-            padding-bottom: 15px;
-            margin-bottom: 40px;
+        
+        .highlight-box {
+            transition: all 0.3s ease;
         }
-        h2 {
-            color: #d2691e; /* Color cálido para encabezados de sección */
-            font-size: 1.8em;
-            margin-top: 40px;
+        
+        .highlight-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
-        .container {
-            max-width: 950px;
-            margin: 0 auto;
-            padding: 30px;
-            background-color: white; /* Contenido principal en blanco para contraste */
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Sombra clara para enfocar */
-        }
-        .seccion-practica {
-            padding: 25px;
-            margin-top: 25px;
-            border: 3px solid #ccc;
-            border-radius: 8px;
-            background-color: #f7f7ff; /* Fondo sutil para las áreas de práctica */
-        }
-        /* PRINCIPIO: Prevención de Errores */
-        .consejo-seguridad {
-            background-color: #ffcccb; /* Fondo rojo/rosa para advertencias de seguridad */
-            color: #900000;
-            padding: 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        button {
-            background-color: #3cb371; /* Verde esmeralda, color de "éxito" */
-            color: white;
-            border: none;
-            padding: 15px 25px;
-            font-size: 1.3em;
-            cursor: pointer;
-            border-radius: 5px;
-            display: block;
-            width: 100%;
-            margin-top: 20px;
-            transition: background-color 0.3s;
-        }
-        button:hover {
-            background-color: #2e8b57;
-        }
-        .explicacion-clave {
-            border-left: 5px solid #4b0082;
-            padding-left: 15px;
-            margin-top: 10px;
-            background-color: #f0e6ff;
-        }
-        .tecla-importante {
-            color: #4b0082;
-            font-weight: bold;
-            background-color: #fffacd; /* Amarillo suave para destacar la tecla */
-            padding: 3px 8px;
-            border-radius: 3px;
-            border: 1px solid #4b0082;
-            white-space: nowrap; /* Evita que el nombre de la tecla se rompa */
-        }
-        #texto-ingresado {
-            border: 2px solid #4b0082;
-            padding: 15px;
-            min-height: 120px;
-            margin-top: 15px;
-            background-color: white;
-            font-size: 1.5em;
-            width: 100%;
-            box-sizing: border-box;
+        
+        .keyboard-key {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            box-shadow: 0 2px 0 #adb5bd;
+            font-family: monospace;
         }
     </style>
 </head>
-<body>
-
-    <div class="container">
-        <h1>🚀 ¡Bienvenido/a al Refuerzo Digital!</h1>
-
-        <p class="consejo-seguridad">
-            ⚠️ **ATENCIÓN:** Esta página es 100% segura. **¡Es IMPOSIBLE que dañe algo del computador o la información!** Practique con tranquilidad.
-        </p>
-
-        <h2>🖱️ 1. EXPLICACIÓN y PRÁCTICA del Ratón</h2>
-        
-        <div class="seccion-practica">
-            <h3>¿Qué hace el Ratón?</h3>
-            <p>El ratón es como su **dedo en el celular**, pero para el computador. Le sirve para **señalar** dónde quiere ir.</p>
-            <div class="explicacion-clave">
-                <p>👉 **Función principal:** Mover la flecha (cursor) en la pantalla.</p>
-                <p>👉 **Clic (Botón Izquierdo):** Es el "Toque" o "Tocar" del celular. Sirve para **seleccionar** o **abrir** una opción.</p>
+<body class="bg-gray-50">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Header Section -->
+<header class="text-center mb-12">
+<h1 class="text-4xl md:text-5xl font-bold text-purple-800 mb-4">
+                <span class="inline-block">🚀 Aprenda Digital</span>
+            </h1>
+            <p class="text-lg text-gray-600 mb-2">Siga las instrucciones en orden para un mejor aprendizaje</p>
+<p class="text-4xl md:text-5xl font-bold text-purple-800">Su centro de aprendizaje tecnológico para adultos</p>
+</header>
+        <!-- Scroll Section -->
+        <section class="mb-16 bg-white rounded-xl shadow-md overflow-hidden highlight-box">
+            <div class="p-6 md:p-8">
+                <div class="flex flex-col items-center">
+                    <div class="w-full">
+<div class="flex items-center mb-6">
+                            <i data-feather="arrow-down" class="text-blue-500 mr-3 w-8 h-8"></i>
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800">1. Aprenda a Desplazarse</h2>
+                        </div>
+                        <div class="space-y-4 text-gray-700">
+                            <p>El desplazamiento es esencial para navegar por páginas largas en la computadora.</p>
+                            
+                            <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+                                <h3 class="font-bold text-blue-800 mb-2">Métodos para desplazarse:</h3>
+                                <ul class="list-disc pl-5 space-y-2">
+                                    <li><span class="font-semibold">Rueda del ratón:</span> Gire la rueda hacia abajo para desplazarse hacia abajo</li>
+                                    <li><span class="font-semibold">Teclas de flecha:</span> Presione <span class="keyboard-key">↓</span> para bajar y <span class="keyboard-key">↑</span> para subir</li>
+                                    <li><span class="font-semibold">Barra de desplazamiento:</span> Arrastre la barra lateral derecha hacia abajo</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="mt-6">
+                                <h3 class="font-bold text-lg mb-3">Ejercicio práctico:</h3>
+                                <p class="mb-4">Desplácese hacia abajo hasta el final de esta sección y presione el botón:</p>
+                                <div style="height: 400px; overflow-y: scroll; border: 1px solid #ddd; padding: 20px; margin-bottom: 20px;" id="scroll-area">
+                                    <p class="text-5xl font-bold text-center py-20">¡Comience a desplazarse hacia abajo!</p>
+                                    <div style="height: 1800px;"></div>
+                                    <p id="scroll-feedback" class="text-6xl font-bold text-center py-20 text-green-600 hidden">¡FELICITACIONES! 🎉 Ha llegado al final</p>
+</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <h3>Ejercicio de Precisión (Control del Usuario)</h3>
-            <p>El movimiento se aprende con práctica. Intente mover el ratón despacio hasta el botón y haga **un solo clic** firme.</p>
-            
-            <button id="boton-raton" onclick="mostrarMensajeRaton()">HAGA CLIC AQUÍ para confirmar su control.</button>
-            
-            <p id="mensaje-raton" style="text-align: center; font-weight: bold; margin-top: 15px; color: #3cb371; display: none;">
-                ¡Felicidades, **CLIC PERFECTO**! Siga con el teclado.
-            </p>
-        </div>
+        </section>
+        <!-- Scroll Section -->
+<section class="mb-16 bg-white rounded-xl shadow-md overflow-hidden highlight-box">
+            <div class="p-6 md:p-8">
+                <div class="flex flex-col items-center">
+<div class="w-full">
+<div class="flex items-center mb-6">
+                            <i data-feather="mouse-pointer" class="text-purple-600 mr-3 w-8 h-8"></i>
+                            <h2 class="text-2xl md:text-3xl font-bold text-gray-800">2. Domine el Ratón</h2>
+</div>
+<div class="space-y-4 text-gray-700">
+                    <p>El ratón es su <span class="font-semibold">dedo digital</span> para interactuar con la computadora.</p>
+                    
+                    <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+                        <h3 class="font-bold text-purple-800 mb-2">Funciones principales:</h3>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li><span class="font-semibold">Mover el cursor:</span> Desplace el ratón para posicionar la flecha en pantalla</li>
+                            <li><span class="font-semibold">Clic izquierdo:</span> Selecciona elementos (como tocar en el celular)</li>
+                            <li><span class="font-semibold">Clic derecho:</span> Muestra opciones adicionales</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <h3 class="font-bold text-lg mb-3">Ejercicio práctico:</h3>
+                        <p class="mb-4">Practique moviendo el ratón y haciendo clic en el botón:</p>
+                        <button id="mouse-btn" class="w-full bg-purple-600 hover:bg-purple-700 text-white font-bold py-4 px-6 rounded-lg transition duration-300">
+                            Haga clic aquí para practicar
+                        </button>
+                        <p id="mouse-feedback" class="hidden mt-3 text-center text-green-600 font-semibold">¡Perfecto! Ha dominado el clic básico.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        </script>
 
-        <hr style="border: 1px solid #ccc; margin: 40px 0;">
-
-        <h2>⌨️ 2. EXPLICACIÓN y PRÁCTICA del Teclado</h2>
-        
-        <div class="seccion-practica">
-            <h3>¿Qué hace el Teclado?</h3>
-            <p>El teclado es su máquina de escribir digital. Conocer la ubicación de solo **tres teclas** le dará gran seguridad para empezar a escribir:</p>
+        <script>
+            // Auto scroll detection
+            const scrollArea = document.getElementById('scroll-area');
+            const scrollFeedback = document.getElementById('scroll-feedback');
             
-            <div class="explicacion-clave">
+            scrollArea.addEventListener('scroll', function() {
+                const scrolledToBottom = scrollArea.scrollHeight - scrollArea.scrollTop === scrollArea.clientHeight;
                 
-                <h4>1. La Tecla para Corregir: <span class="tecla-importante">BORRAR</span> o <span class="tecla-importante">BACKSPACE</span></h4>
-                <ul>
-                    <li>**Ubicación:** Está justo **encima de la tecla ENTER**, en el lado derecho. Es una tecla **larga** con una **flecha gorda hacia la izquierda** (←).</li>
-                    <li>**Uso (Prevención de Errores):** ¡No tenga miedo! Presiónela para **eliminar** la última letra que escribió y **arreglar** cualquier error.</li>
-                </ul>
+                if (scrolledToBottom && scrollFeedback.classList.contains('hidden')) {
+                    scrollFeedback.classList.remove('hidden');
+                    
+                    // Big confetti celebration
+                    confetti({
+                        particleCount: 300,
+                        spread: 120,
+                        origin: { y: 0.6 },
+                        scalar: 1.5
+                    });
+                    
+                    // Additional fireworks effect
+                    setTimeout(() => {
+                        confetti({
+                            particleCount: 100,
+                            angle: 60,
+                            spread: 80,
+                            origin: { x: 0 }
+                        });
+                        confetti({
+                            particleCount: 100,
+                            angle: 120,
+                            spread: 80,
+                            origin: { x: 1 }
+                        });
+                    }, 300);
+                }
+            });
+</script>
 
-                <h4>2. La Tecla para Continuar: <span class="tecla-importante">ENTER</span> o <span class="tecla-importante">INTRO</span></h4>
-                <ul>
-                    <li>**Ubicación:** Generalmente es la tecla más grande y gruesa en el **lado derecho**, justo debajo de <span class="tecla-importante">Borrar</span>.</li>
-                    <li>**Uso:** Sirve para dar un **salto de línea** (empezar un nuevo párrafo) o para **ACEPTAR** una opción en un programa.</li>
-                </ul>
+        <!-- Keyboard Section -->
+<section class="mb-16 bg-white rounded-xl shadow-md overflow-hidden highlight-box">
+            <div class="p-6 md:p-8">
+                <div class="flex items-center mb-6">
+                    <i data-feather="type" class="text-orange-500 mr-3 w-8 h-8"></i>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800">3. Conozca el Teclado</h2>
+</div>
+                
+                <div class="space-y-4 text-gray-700">
+                    <p>El teclado le permite escribir y dar instrucciones a la computadora.</p>
+                    <div class="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-500">
+                        <h3 class="font-bold text-orange-800 mb-2">Teclas esenciales:</h3>
+                                <div class="flex flex-col gap-6">
+                            <div>
+<ul class="list-disc pl-5 space-y-2">
+                                    <li><span class="font-semibold">Barra espaciadora:</span> <span class="keyboard-key">Espacio</span> - Crea espacios entre palabras</li>
+                                    <li><span class="font-semibold">Enter:</span> <span class="keyboard-key">Enter</span> - Salta de línea o confirma acciones</li>
+                                    <li><span class="font-semibold">Borrar:</span> <span class="keyboard-key">Backspace</span> - Elimina texto hacia atrás</li>
+                                    <li><span class="font-semibold">Mayúsculas:</span> <span class="keyboard-key">Bloq Mayús</span> - Activa/desactiva mayúsculas permanentes</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+<div class="mt-6">
+                        <h3 class="font-bold text-lg mb-3">Practique escribiendo:</h3>
+                        <p class="mb-2">Use el área de abajo para practicar. Recuerde:</p>
+                        <ul class="list-disc pl-5 mb-4">
+                            <li>Presione <span class="keyboard-key">Enter</span> para saltar de línea</li>
+                            <li>Use <span class="keyboard-key">Backspace</span> para corregir errores</li>
+                            <li>Pruebe <span class="keyboard-key">Bloq Mayús</span> para ver el efecto</li>
+                        </ul>
+                        <textarea id="typing-practice" class="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none" rows="5" placeholder="Escriba aquí para practicar..."></textarea>
 
-                <h4>3. El Espacio: <span class="tecla-importante">BARRA ESPACIADORA</span></h4>
-                <ul>
-                    <li>**Ubicación:** Es la tecla **más larga de todo el teclado**, ubicada en la parte inferior.</li>
-                    <li>**Uso:** Sirve para dejar un **espacio** entre las palabras.</li>
-                </ul>
+                        <div class="mt-6">
+                            <h3 class="font-bold text-lg mb-3">Ejercicio de escritura:</h3>
+                            <p class="mb-2">Escriba exactamente: <span class="font-semibold text-purple-600">"Hola, estoy feliz"</span></p>
+                            <div class="bg-gray-100 p-4 rounded-lg mb-4">
+                                <h4 class="font-semibold text-gray-800 mb-2">Recomendaciones:</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-sm">
+                                    <li>Primero practique en el área de arriba (Practique escribiendo) para familiarizarse</li>
+                                    <li>Use <span class="keyboard-key">Backspace</span> para corregir errores al escribir</li>
+                                    <li>Pruebe activar <span class="keyboard-key">Bloq Mayús</span> para entender mayúsculas</li>
+                                    <li>Presione <span class="keyboard-key">Enter</span> para confirmar (no para salto de línea)</li>
+                                </ul>
+</div>
+                            <div class="relative">
+                                <textarea id="exercise-text" class="w-full p-4 border-2 border-gray-300 rounded-lg focus:border-purple-500 focus:outline-none" rows="2" placeholder="Escriba aquí..."></textarea>
+                                <div id="error-message" class="hidden text-red-500 text-sm mt-1"></div>
+                            </div>
+                            <button id="check-btn" class="mt-3 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                                Verificar
+                            </button>
+                            <div id="success-message" class="hidden mt-3 p-3 bg-green-100 text-green-800 rounded-lg text-center font-semibold"></div>
+                            <div class="flex items-center mt-3 text-sm text-gray-600">
+                                <i data-feather="alert-circle" class="w-4 h-4 mr-1"></i>
+                                <span>No olvide practicar todas las teclas mencionadas</span>
+                            </div>
+</div>
+                    </div>
+                </div>
             </div>
+        </section>
 
-            <h3>Cuidado con las Mayúsculas (El "Grito")</h3>
-            <p>Si escribe **TODO ASÍ**, es porque la tecla <span class="tecla-importante">Bloq Mayús</span> (o Caps Lock) está **activada**.</p>
-            <p>📍 **SOLUCIÓN:** Presione esa tecla **solo una vez**. Fíjese en la **luz** de su teclado. Si la luz está **APAGADA**, escribirá normal.</p>
-
-            <h3>Ejercicio de Teclado y Bloq Mayús</h3>
-            <p>✅ **Pruebe aquí:** Escriba su nombre. Use la tecla **Borrar** si se equivoca. Luego, active y desactive el **Bloq Mayús** para ver la diferencia.</p>
-            
-            <textarea id="texto-ingresado" placeholder="Escriba aquí para practicar.
-¡Use la tecla BORRAR si se equivoca!
-Pruebe la tecla Bloq Mayús para escribir con mayúsculas." rows="6"></textarea>
-        </div>
-
-        <hr style="border: 1px solid #ccc; margin: 40px 0;">
-
-        <h2>👓 3. Ayuda para la Vista (Zoom)</h2>
-        <div class="seccion-practica">
-            <p>Este es un truco de **Libertad y Control** sobre lo que ve en cualquier página web:</p>
-            
-            <p>Si la letra es muy pequeña, usted puede hacerla **más grande** de inmediato:</p>
-            
-            <ol>
-                <li>Mantenga presionada la tecla **CTRL** (Control, que está a la izquierda).</li>
-                <li>Sin soltar **CTRL**, presione la tecla **Más/Suma** (<span class="tecla-importante">+</span>) varias veces.</li>
-            </ol>
-            
-            <p>Para volver al tamaño normal, presione **CTRL** y la tecla del número **CERO** (<span class="tecla-importante">0</span>).</p>
-            <p style="text-align: center; font-weight: bold; color: #4b0082; margin-top: 15px;">¡Inténtelo ahora mismo en esta página y experimente la diferencia!</p>
-        </div>
-
+<!-- Zoom Section -->
+        <section class="mb-16 bg-white rounded-xl shadow-md overflow-hidden highlight-box">
+            <div class="p-6 md:p-8">
+                <div class="flex items-center mb-6">
+                    <i data-feather="zoom-in" class="text-blue-500 mr-3 w-8 h-8"></i>
+                    <h2 class="text-2xl md:text-3xl font-bold text-gray-800">4. Ajuste el Tamaño</h2>
+</div>
+                
+                <div class="space-y-4 text-gray-700">
+                    <p>Puede hacer que el texto se vea más grande o pequeño según sus necesidades. (Se les recomienda leer todo y luego poner en práctica)</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
+        <h3 class="font-bold text-blue-800 mb-2">Windows/Linux:</h3>
+        <ul class="list-disc pl-5 space-y-2">
+            <li><span class="font-semibold">Aumentar:</span> <span class="keyboard-key">Ctrl</span> + <span class="keyboard-key">+</span></li>
+            <li><span class="font-semibold">Disminuir:</span> <span class="keyboard-key">Ctrl</span> + <span class="keyboard-key">-</span></li>
+            <li><span class="font-semibold">Normalizar:</span> <span class="keyboard-key">Ctrl</span> + <span class="keyboard-key">0</span></li>
+        </ul>
     </div>
+    <div class="bg-purple-50 p-4 rounded-lg border-l-4 border-purple-500">
+        <h3 class="font-bold text-purple-800 mb-2">Mac:</h3>
+        <ul class="list-disc pl-5 space-y-2">
+            <li><span class="font-semibold">Aumentar:</span> <span class="keyboard-key">⌘ Command</span> + <span class="keyboard-key">+</span></li>
+            <li><span class="font-semibold">Disminuir:</span> <span class="keyboard-key">⌘ Command</span> + <span class="keyboard-key">-</span></li>
+            <li><span class="font-semibold">Normalizar:</span> <span class="keyboard-key">⌘ Command</span> + <span class="keyboard-key">0</span></li>
+        </ul>
+    </div>
+</div>
+<div class="mt-6">
+                        <h3 class="font-bold text-lg mb-3">Practique ahora:</h3>
+                        <p>Intente aumentar el tamaño de esta página usando los atajos de teclado.</p>
+                        <p class="text-blue-600 font-semibold mt-2">¡Verá cómo mejora la legibilidad inmediatamente!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Video Help Section -->
+        <section class="mb-12 bg-white rounded-xl shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">¿Necesitas más ayuda?</h2>
+            <p class="text-gray-600 mb-4">Si no entendiste alguna sección, mira estos videos explicativos:</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="https://youtu.be/kPXO-fZLcFA?si=MvQaHmayQzrRoCby" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center">
+                    <i data-feather="youtube" class="mr-2"></i> Ratón
+                </a>
+                <a href="https://youtu.be/7DikegsJiNs?si=hES37RbEX9LW-9MY" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center">
+                    <i data-feather="youtube" class="mr-2"></i> Teclado
+                </a>
+                <a href="https://youtu.be/BwxcSRe65L8?si=uKqLNAdbIhB9XDJ9" target="_blank" class="bg-red-500 hover:bg-red-600 text-white font-bold py-3 px-4 rounded-lg transition duration-300 flex items-center justify-center">
+                    <i data-feather="youtube" class="mr-2"></i> Zoom
+                </a>
+            </div>
+        </section>
 
+        <!-- Footer -->
+        <footer class="text-center text-gray-600 py-6 border-t border-gray-200">
+            <p>© 2023 Aprenda Digital - Todos los derechos reservados</p>
+            <p class="text-sm mt-2">Diseñado con ♥ para adultos que aprenden tecnología</p>
+        </footer>
+</div>
     <script>
-        // Función simple de JavaScript para el botón de práctica del ratón
-        function mostrarMensajeRaton() {
-            // Muestra el mensaje de éxito
-            document.getElementById('mensaje-raton').style.display = 'block';
-            // Oculta el botón para centrar la atención en el éxito del clic
-            document.getElementById('boton-raton').style.display = 'none';
-        }
+        feather.replace();
+        
+        // Confetti library
+        const confettiScript = document.createElement('script');
+        confettiScript.src = 'https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js';
+        document.head.appendChild(confettiScript);
+        // Writing exercise functionality
+        function checkExercise() {
+            const exerciseText = document.getElementById('exercise-text').value;
+            const targetText = "Hola, estoy feliz";
+            const errorMessage = document.getElementById('error-message');
+            const successMessage = document.getElementById('success-message');
+            
+            errorMessage.classList.add('hidden');
+            successMessage.classList.add('hidden');
+            if (exerciseText.trim() === targetText) {
+                successMessage.textContent = "¡Perfecto! Has escrito correctamente.";
+                successMessage.classList.remove('hidden');
+                document.getElementById('exercise-text').classList.add('bg-green-100', 'border-green-500');
+                
+                // Confetti effect
+                confetti({
+                    particleCount: 150,
+                    spread: 90,
+                    origin: { y: 0.6 }
+                });
+            } else {
+                let errorDetails = "";
+                if (exerciseText.length < targetText.length) {
+                    errorDetails = "Te faltan caracteres. ";
+                } else if (exerciseText.length > targetText.length) {
+                    errorDetails = "Tienes caracteres adicionales. ";
+                }
+                
+                // Check character by character
+                for (let i = 0; i < Math.min(exerciseText.length, targetText.length); i++) {
+                    if (exerciseText[i] !== targetText[i]) {
+                        errorDetails += `Error en posición ${i+1}: esperabas '${targetText[i]}' pero escribiste '${exerciseText[i]}'. `;
+                        break;
+                    }
+                }
+                
+                errorMessage.textContent = errorDetails || "Hay un error en tu texto. Revisa cuidadosamente.";
+                errorMessage.classList.remove('hidden');
+                document.getElementById('exercise-text').classList.remove('bg-green-100', 'border-green-500');
+            }
+}
+
+        document.getElementById('check-btn').addEventListener('click', checkExercise);
+
+        // Handle Enter key to submit instead of new line
+        document.getElementById('exercise-text').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                checkExercise();
+            }
+        });
+// Mouse practice functionality with confetti
+document.getElementById('mouse-btn').addEventListener('click', function() {
+            const feedback = document.getElementById('mouse-feedback');
+            feedback.classList.remove('hidden');
+            this.textContent = '¡Bien hecho!';
+            this.classList.remove('bg-purple-600', 'hover:bg-purple-700');
+            this.classList.add('bg-green-500', 'hover:bg-green-600');
+            
+            // Confetti effect
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { y: 0.6 }
+            });
+});
+    </script>
+    <script>
+        // Scroll to bottom when page loads
+        window.onload = function() {
+            window.scrollTo(0, document.body.scrollHeight);
+        };
     </script>
 </body>
 </html>
